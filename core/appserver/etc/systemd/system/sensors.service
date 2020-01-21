@@ -1,0 +1,14 @@
+[Unit]
+Description=listen to mqtt and publish to influxdb
+After=mosquitto
+
+[Service]
+User=sensors
+Group=sensors
+EnvironmentFile=-/etc/default/sensors
+ExecStart=/usr/local/bin/sensors $SENSORS_OPTS
+KillMode=control-group
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+SENSORS=/var/local/sensors
+DEBUG=
+MYPROJECT=

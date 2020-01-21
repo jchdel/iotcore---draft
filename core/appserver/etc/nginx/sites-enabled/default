@@ -1,0 +1,20 @@
+# Default server configuration
+server {
+	listen 80 default_server;
+	#listen [::]:80 default_server;
+	server_name _;
+	location / {
+		root /srv/alis/manufacture/srv/http;
+		autoindex on;
+		try_files $uri $uri/ =404;
+	}
+	include /etc/nginx/fcgiwrap.conf;
+	location /smokeping {
+		root /var/www;
+	}
+	location /home {
+		alias /var/www/html;
+		index viewHome.html;
+	}
+}
+
