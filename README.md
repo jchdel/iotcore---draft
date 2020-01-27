@@ -16,3 +16,7 @@ We first start deploying
 * then a seconfd one with openBalena-CLI on top of LXQt (balena-cli); 
 * a third one with the appserver
 * to be continued...
+
+balena is a no go because the way "app" are defined. It is not obvious if even possible to run different tagged versions of same App at same time. And to define a new App for each version introduce too complex workflow for our current CI.
+
+Let's try foundries.io...
