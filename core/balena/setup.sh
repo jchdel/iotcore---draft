@@ -14,5 +14,5 @@ apt-get install -y npm
 cd /usr/local/src
 git clone https://github.com/balena-io/open-balena.git open-balena
 cd open-balena
-./scripts/quickstart -U jlo@ampard.com -P ****** -d ampard.lab -p
+./scripts/quickstart -U jch@home.lab -P ****** -d home.lab -p
 ./scripts/compose up -d
